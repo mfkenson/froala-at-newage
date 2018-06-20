@@ -26,6 +26,13 @@
     <!-- Custom styles for this template -->
     <link href="css/new-age.min.css" rel="stylesheet">
 
+    <!-- Include external CSS. -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.25.0/codemirror.min.css">
+
+    <!-- Include Editor style. -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.8.1/css/froala_editor.pkgd.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.8.1/css/froala_style.min.css" rel="stylesheet" type="text/css" />
   </head>
 
   <body id="page-top">
@@ -55,7 +62,7 @@
     </nav>
 
     <header class="masthead">
-      <div class="container h-100">
+      <div class="container h-100" id="froala-editor1">
         <div class="row h-100">
           <div class="col-lg-7 my-auto">
             <div class="header-content mx-auto">
@@ -83,7 +90,7 @@
     </header>
 
     <section class="download bg-primary text-center" id="download">
-      <div class="container">
+      <div class="container" id="froala-editor2">
         <div class="row">
           <div class="col-md-8 mx-auto">
             <h2 class="section-heading">Discover what all the buzz is about!</h2>
@@ -99,7 +106,7 @@
 
     <section class="features" id="features">
       <div class="container">
-        <div class="section-heading text-center">
+        <div id="froala-editor3" class="section-heading text-center">
           <h2>Unlimited Features, Unlimited Fun</h2>
           <p class="text-muted">Check out what you can do with this app theme!</p>
           <hr>
@@ -171,7 +178,7 @@
     </section>
 
     <section class="contact bg-primary" id="contact">
-      <div class="container">
+      <div class="container" id="froala-editor4">
         <h2>We
           <i class="fa fa-heart"></i>
           new friends!</h2>
@@ -222,6 +229,22 @@
     <!-- Custom scripts for this template -->
     <script src="js/new-age.min.js"></script>
 
+
+        <!-- Include external JS libs. -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.25.0/codemirror.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.25.0/mode/xml/xml.min.js"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+        <!-- Include Editor JS files. -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.8.1/js/froala_editor.pkgd.min.js"></script>
+        <script> $(function() {
+          $('div#froala-editor1, div#froala-editor2, div#froala-editor3, div#froala-editor4').froalaEditor({
+            toolbarInline: true,
+            toolbarButtons: ['bold', 'italic', 'underline', 'strikeThrough', 'color', 'emoticons', '-', 'paragraphFormat', 'align', 'formatOL', 'formatUL', 'indent', 'outdent', '-', 'insertImage', 'insertLink', 'insertFile', 'insertVideo', 'undo', 'redo'],
+            imageStyles: null
+          });
+
+         }); </script>
   </body>
 
 </html>
